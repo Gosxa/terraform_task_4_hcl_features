@@ -9,6 +9,3 @@
 *.tfstate
 *.tfstate.*
 crash.log
-
-# SSH keys
-id_rsa_terraform.pub

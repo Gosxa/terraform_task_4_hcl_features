@@ -10,7 +10,5 @@ output "joined_tags" {
 
 # Get all VM IDs
 output "vm_ids" {
-  value = [
-    for vm in azurerm_linux_virtual_machine.main : vm.id
-  ]
+  value = [for vm in azurerm_linux_virtual_machine.main : vm.id]
 }

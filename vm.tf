@@ -8,7 +8,7 @@ resource "azurerm_linux_virtual_machine" "main" {
   admin_username      = "azureuser"
 
   network_interface_ids = [
-    element(values(azurerm_network_interface.main)[*].id, count.index)
+    azurerm_network_interface.main["${var.prefix}-nic-${count.index + 1}"].id
   ]
 
   lifecycle {
